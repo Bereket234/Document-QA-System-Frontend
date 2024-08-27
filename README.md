@@ -1,6 +1,12 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Envirnoment
+
+1. Backend API setup
+   You can change the backend api in **/src/configs/index.js**
+   ```bash
+   const BACKEND_API= process.env.BACKEND_API || "http://localhost:3000"
 
 ## Available Scripts
 
