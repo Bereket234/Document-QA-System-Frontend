@@ -163,19 +163,10 @@ const PDFChat = () => {
         alignItems="center"
         borderTop="none"
       >
-        
-
         <Box
-          display="flex"
-          alignItems="center"
-          bg="white"
-          borderRadius="full"
-          boxShadow="sm"
-          p="2"
           width={["90%", "60%"]}
-          transition="width 0.3s ease"
         >
-          {selectedFile && (
+        {selectedFile && (
           <Box
             display="flex"
             alignItems="center"
@@ -184,13 +175,27 @@ const PDFChat = () => {
             
             p="2"
             mb="2"
-            width="20%"
+            width="50%"
             justifyContent="space-between"
           >
-            <Text fontSize="sm">{selectedFile.name}</Text>
+            <Box>
+              <Text fontSize="sm">{selectedFile.name}</Text>
+              <Text fontWeight="100" textAlign="left">PDF</Text>
+            </Box>
             <CloseButton size="sm" onClick={handleRemoveFile} />
           </Box>
         )}
+        <Box
+          display="flex"
+          alignItems="center"
+          bg="white"
+          borderRadius="full"
+          boxShadow="sm"
+          p="2"
+          width={["90%", "100%"]}
+          transition="width 0.3s ease"
+        >
+          
           <IconButton
             icon={<AttachmentIcon />}
             onClick={handleIconClick}
@@ -227,6 +232,7 @@ const PDFChat = () => {
             _active={{ bg: "blue.700" }}
             ml={2}
           />
+        </Box>
         </Box>
       </Box>
     </Flex>
